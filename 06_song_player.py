@@ -35,17 +35,44 @@ Beide Songs haben denselben Datentyp: True
 """
 
 # TODO: Importiere die Klasse Song aus 05_song
-# from 05_song import Song
-
+# from 05_song import Songo
+from song import Song #from Filename ohne py" import Klassennamen
+song_1 = Song(title="Summer Vibes", interpreten=["DJ Max", "Sarah Sound"])
+song_1.zeige_info()
 
 # TODO: Erstelle verschiedene Variablen mit unterschiedlichen Datentypen
 # text = "Hallo"
 # zahl = 42
 # liste = [1, 2, 3]
 
+text= "Hallo"
+zahl = 42
+liste = [1, 2, 3]
+
+print(type(text))
+print(type(zahl))
+print(type(liste))
+print(type(song_1))
+
+class Laptop:
+    pass
+
+laptop_1 = Laptop()
+laptop_2 = Laptop()
+print(type(laptop_1))
+print(f"Datentypen von Laptop 2: " {type(laptop_2)}")
+
+song_2 = Song(title="Neon Lights", interpreten=["Electro Beat", "Night Rider"])
+print(type(song_2))
+
+listesong = [song_1, song_2]
+print(type(listesong[0].title))
+
 
 # TODO: Erstelle 3 Song-Objekte mit Titeln und Interpreten deiner Wahl
-
+song1 = Song("Summer Vibes", ["DJ Max", "Sarah Sound"])
+song2 = Song("Neon Lights", ["Electro Beat", "Night Rider"])
+song3 = Song("Ocean Wave", ["Sea Breeze", "Wave Rider"])
 
 # TODO: Zeige die Datentypen mit type()
 # print("=== Datentypen Vergleich ===")

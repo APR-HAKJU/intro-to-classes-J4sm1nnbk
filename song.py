@@ -1,18 +1,81 @@
-# Gegeben ist eine Liste, die Informationen über verschiedene Songs enthält.
-# Verändere den Code so, dass eine Klasse "Song" definiert wird.
-# Die Eigenschaften Titel, Künstler und Anzahl der Streams sollen als Attribute im Konstruktor definiert werden
+"""
+Übung 3: Song mit Listen
 
-song_1 = ["Blinding Lights", "The Weeknd", 4_200_000_000]
-song_2 = ["Shape of You", "Ed Sheeran", 5_300_000_000]
-song_3 = ["Dance Monkey", "Tones and I", 3_400_000_000]
+Aufgabe:
+Erstelle eine Klasse `Song` mit:
+- Konstruktor mit Parametern: titel (String) und interpreten (Liste, z.B. ["Artist1", "Artist2"])
+- Methode interpret_hinzufuegen(name) mit Parameter:
+  - Fügt einen neuen Interpreten zur Liste hinzu
+  - Gibt aus "🎤 {name} wurde hinzugefügt"
+- Methode zeige_info() ohne Parameter:
+  - Zeigt Titel und alle Interpreten an
+- Methode anzahl_interpreten() ohne Parameter:
+  - Gibt die Anzahl der Interpreten zurück
+- Methode play() ohne Parameter:
+  - Gibt aus "▶️ Song '{titel}' wird gespielt..."
 
-#TODO: Aufgabe 1: 
-#   Definiere die Klasse "Song" mit einem Konstruktor (__init__),
-#  der die Attribute titel, künstler und streams initialisiert.
+Erstelle einen Song mit einem Titel und 2 Interpreten deiner Wahl,
+zeige die Info, füge einen weiteren Interpreten hinzu, zeige die Anzahl und die Info nochmal.
+Spiele dann den Song ab.
 
-# TODO: Aufgabe 2:
-#   Erstelle drei Objekte der Klasse "Song" mit den Informationen aus der Liste oben
+💡 Tipps:
+- self.interpreten.append(name) fügt ein Element zur Liste hinzu
+- len(self.interpreten) gibt die Anzahl der Elemente zurück
+- Mit einer for-Schleife kannst du alle Interpreten ausgeben
+- Du kannst beliebige Interpreten und Titel verwenden!
 
-# TODO: Aufgabe 3:
-#   Gib für jeden Song den Titel und die Anzahl der Streams in folgendem Format aus:
-#   "Der Song '<Titel>' von <Künstler> hat <Anzahl der Streams> Streams."
+Beispiel Ergebnis:
+🎵 Song: Summer Vibes
+   Interpreten: DJ Max, Sarah Sound
+🎤 Beat Producer wurde hinzugefügt
+👥 Anzahl Interpreten: 3
+🎵 Song: Summer Vibes
+   Interpreten: DJ Max, Sarah Sound, Beat Producer
+▶️ Song 'Summer Vibes' wird gespielt...
+"""
+
+# TODO: Erstelle hier die Klasse Song
+class Song:
+    def __init__(self, titel, interpreten):
+        self.titel = titel
+        self.interpreten = interpreten
+
+    def interpret_hinzufuegen(self, name):
+        self.interpreten.append(name)
+        print(f" {name} wurde hinzugefügt")
+
+    def zeige_info(self):
+        print(f"Song: {self.titel}")
+        print("   Interpreten: " + ", ".join(self.interpreten))
+
+    def anzahl_interpreten(self):
+        return len(self.interpreten)
+
+    def play(self):
+        print(f"Song '{self.titel}' wird gespielt...")
+
+# TODO: Erstelle einen Song mit einem Titel und 2 Interpreten deiner Wahl
+
+mein_song = Song("Summer Vibes", ["DJ Max", "Sarah Sound"])
+mein_song2 = Song("Cool Beats", ["MC Cool", "DJ Smooth"])
+mein_song3 = Song("Rock On", ["The Rockers", "Guitar Hero"])
+
+
+# TODO: Zeige die Song-Info
+mein_song.zeige_info()
+
+
+# TODO: Füge einen weiteren Interpreten hinzu
+mein_song.interpret_hinzufuegen("Beat Producer")
+
+
+# TODO: Zeige die Anzahl der Interpreten
+anzahl = mein_song.anzahl_interpreten()
+print(f"Anzahl Interpreten: {anzahl}")
+
+# TODO: Zeige die Song-Info erneut
+mein_song.zeige_info()
+
+# TODO: Spiele den Song ab
+mein_song.play()
+
