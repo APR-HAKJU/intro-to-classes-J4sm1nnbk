@@ -53,6 +53,7 @@ class Einkaufswagen:
         self.artikel = []
         
 
+
     # TODO 2.2: Schreibe die Methode hinzufuegen(artikel)
     # Parameter: self, artikel (ein Artikel-Objekt)
     # Füge das Artikel-Objekt zur Liste hinzu
@@ -60,7 +61,7 @@ class Einkaufswagen:
     def hinzufuegen(self, artikel):
         self.artikel.append(artikel)
         print(f" {artikel.name} hinzugefügt")
-        
+         
     # TODO 2.3: Schreibe die Methode gesamtpreis()
     # Keine Parameter außer self
     # Berechne die Summe aller Preise (artikel.preis)

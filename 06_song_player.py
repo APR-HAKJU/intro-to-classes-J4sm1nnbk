@@ -60,13 +60,23 @@ class Laptop:
 laptop_1 = Laptop()
 laptop_2 = Laptop()
 print(type(laptop_1))
-print(f"Datentypen von Laptop 2: " {type(laptop_2)}")
+print(f"Datentypen von Laptop 2:  {type(laptop_2)}")
 
 song_2 = Song(title="Neon Lights", interpreten=["Electro Beat", "Night Rider"])
 print(type(song_2))
 
 listesong = [song_1, song_2]
 print(type(listesong[0].title))
+print(type(listesong[1].interpreten))
+
+song_3 = Song(title="Fein", interpreten=["Travis Scott"])
+listesong.append(song_3)
+
+song_4 = Song(title="Rock On", interpreten=["The Rockers", "Guitar Hero"])
+listesong.append(song_4)
+
+for song in listesong:
+    print(song.title)
 
 
 # TODO: Erstelle 3 Song-Objekte mit Titeln und Interpreten deiner Wahl
@@ -82,12 +92,24 @@ song3 = Song("Ocean Wave", ["Sea Breeze", "Wave Rider"])
 # print(f"Song1: {type(song1)}")
 # print(f"Song2: {type(song2)}")
 # print()
-
+print("=== Datentypen Vergleich ===")
+print(f"Text {type(text)}")
+print(f"Zahl: {type(zahl)}")
+print(f"Liste: {type(liste)}")
+print(f"Song1: {type(song1)}")
+print(f"Song2: {type(song2)}")
+print()
 
 # TODO: Vergleiche, ob zwei Songs denselben Datentyp haben
 # print(f"Beide Songs haben denselben Datentyp: {type(song1) == type(song2)}")
 # print()
 
+print(f"Beide Songs haben denselben Datentyp: {type(song1) == type(song2)}")
+print()
 
 # TODO: Spiele alle Songs ab
 # print("=== Song Playlist ===")
+print("=== Song Playlist ===")
+song1.play()
+song2.play()
+song3.play()
